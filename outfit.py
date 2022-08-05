@@ -9,7 +9,6 @@ class Outfit:
         self.option = []
         self.score = 0
     
-
     def scores(self, question):
        
         if question[0] == self.option[0]:
@@ -49,29 +48,27 @@ outfit_3 = Outfit("Argyle Set + 'Soft' Aesthetic", "A style that includes many p
 outfit_3.option = ["vibrant", "lofi", "neutral", "cool", "neutral", "forever 21", "3", "3", "1", "2"]
 
 
+print("                                           WELCOME!\n I am the Fashion Bot and I will help you make an outfit your choices to this quiz. Answer the following 10 questions honestly and I will generate an outfit I think you will look great in + let you know which style would suit you most!\n")
 
-#def prompt_user():
-print("                             WELCOME!\n I am the Fashion Bot and I will help you make an outfit your choices to this quiz. Answer the following 10 questions honestly and I will generate an outfit I think you will look great in + let you know which style would suit you most!\n")
+question_1 = input("1. Which of these words best describe you? (adventorous, peaceful, vibrant, creative, intelligant, or expressive): ")
 
-question_1 = input(" Which of these words best describe you? (adventorous, peaceful, vibrant, creative, intelligant, or expressive): ")
+question_2 = input("2. What is your typical music taste? (pop, rock, indie, lofi, country): ")
 
-question_2 = input(" What is your typical music taste? (pop, rock, indie, lofi, country): ")
+question_3 = input("3. What do you like to do on a Saturday? (stay inside, go out, neutral): ")
 
-question_3 = input(" What do you like to do on a Saturday? (stay inside, go out, neutral): ")
+question_4 = input("4. What color do you typically lean towards in your outfits? NOTE: Warm- reds, yellows, and oranges. Cool- blues, purples, and greens. Neutrals- whites, blacks, and greys.\n (warm, cool, neutral): ")
 
-question_4 = input(" What color do you typically lean towards in your outfits? NOTE: Warm- reds, yellows, and oranges. Cool- blues, purples, and greens. Neutrals- whites, blacks, and greys.\n (warm, cool, neutral): ")
+question_5 = input("5. Do you prefer to blend in, stand out, or are you neutral? (blend in, stand out, neutral): ")
 
-question_5 = input(" Do you prefer to blend in, stand out, or are you neutral? (blend in, stand out, neutral): ")
+question_6 = input("6. What store do you typically shop at? (forever 21, hot topic, zara): ")
 
-question_6 = input(" What store do you typically shop at? (forever 21, hot topic, zara): ")
+question_7 = input("7. Rate dresses from 1-3. 1=Hate, 2=Neutral, 3=Love. (1, 2, 3): ")
 
-question_7 = input(" Rate dresses from 1-3. 1-Hate, 2- Neutral, 3-Love. (1, 2, 3): ")
+question_8 = input("8. Rate jeans from 1-3. 1=Hate, 2-=Neutral, 3=Love. (1, 2, 3): ")
 
-question_8 = input(" Rate jeans from 1-3. 1-Hate, 2- Neutral, 3-Love. (1, 2, 3): ")
+question_9 = input("9. Rate cropped shirts from 1-3. 1=Hate, 2=Neutral, 3=Love. (1, 2, 3): ")
 
-question_9 = input(" Rate cropped shirts from 1-3. 1-Hate, 2- Neutral, 3-Love. (1, 2, 3): ")
-
-question_10 = input("Rate graphic tees/ t-shirts from 1-3. 1-Hate, 2- Neutral, 3-Love. (1, 2, 3): ")
+question_10 = input("10. Rate graphic tees/ t-shirts from 1-3. 1=Hate, 2=Neutral, 3=Love. (1, 2, 3): ")
 
 responses = [question_1, question_2, question_3, question_4, question_5, question_6, question_7, question_8, question_9, question_10]
 
@@ -97,109 +94,3 @@ elif score_list[0] == score_list[1]:
 
 else:
     print("No outfit match")
-
-# class Outfit:
-#     def __init__(self, name, description, link):
-#         self.name = name
-#         self.description = description
-#         self.link = link
-#         self.option = []
-#         self.score = 0
-    
-
-#     def scores(self):
-#         self.score = 0
-#         score_list = [{outfit_1.score}, {outfit_2.score}, {outfit_3.score}]
-#         if question_1 == self.option[0]:
-#             self.score += 1
-#         if question_2 == self.option[1]:
-#             self.score += 1
-#         if question_3 == self.option[2]:
-#             self.score += 1
-#         if question_4 == self.option[3]:
-#             self.score += 1
-#         if question_5 == self.option[4]:
-#             self.score += 1
-#         if question_6 == self.option[5]:
-#             self.score += 1
-#         if question_7 == self.option[6]:
-#             self.score += 1
-#         if question_8 == self.option[7]:
-#             self.score += 1
-#         if question_9 == self.option[8]:
-#             self.score += 1
-#         if question_10 == self.option[9]:
-#             self.score += 1
-        
-#         score_list.sort()
-#         if score_list[0] == outfit_1.score:
-#             print(f"The FASHION BOT suggests this outfit:\n {outfit_1.name}. {outfit_1.description}. {outfit_1.link}.")
-
-#         elif score_list[0] == outfit_2:
-#             print(f"The FASHION BOT suggests this outfit:\n {outfit_2.name}. {outfit_2.description}. {outfit_2.link}.")
-
-#         elif score_list[0] == outfit_3:
-#             print(f"The FASHION BOT suggests this outfit:\n {outfit_3.name}. {outfit_3.description}. {outfit_3.link}.")
-
-#         elif score_list[0] == score_list[1]:
-#             random_choice = random.choice(outfit_1, outfit_2, outfit_3)
-#             print(random_choice)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# outfit1_score = 0
-# outfit2_score = 0
-# outfit3_score = 0
-
-# if question_1 == outfit_1.option[0]:
-#     outfit1_score += 1
-# elif question_1 == outfit_2.option[0]:
-#     outfit2_score += 1
-# elif question_1 == outfit_3.option[0]:
-#     outfit3_score += 1
-# if question_2 == outfit_1.option[1]:
-#     outfit1_score += 1
-# elif question_2 == outfit_2.option[1]:
-#     outfit2_score += 1
-# elif question_2 == outfit_3.option[1]:
-#     outfit3_score += 1
-# if question_3 == outfit_1.option[2]:
-#     outfit1_score += 1
-# elif question_3 == outfit_2.option[2]:
-#     outfit2_score += 1
-# elif question_3 == outfit_3.option[2]:
-#     outfit3_score += 1
-
-# if max(self.score) == outfit_1:
-#     print(f"The FASHION BOT suggests this outfit:\n {outfit_1.name}. {outfit_1.description}. {outfit_1.link}.")
-# elif outfit_2.score > outfit_1.score and outfit_3.score:
-#     print(f"The FASHION BOT suggests this outfit:\n {outfit_2.name}. {outfit_2.description}. {outfit_2.link}.")
-# elif outfit_3.score > outfit_1.score and outfit_2.score:
-#     print(f"The FASHION BOT suggests this outfit:\n {outfit_3.name}. {outfit_3.description}. {outfit_3.link}.")
-
-# Cottagecore = Results("Cottagecore", "An aesthetic or style characterized by old-fashioned rural lifestyle.", [])
-# Indie = Results("Indie", "An aesthetic or style characterized retro, vintage, and hipster clothing.", [])
-# Goth = Results("Goth", "Goth fashion is a style that is marked by dark, mysterious, and homogenous features.", [])
-# Normal = Results("Normal", "Normal fashion is described as unpretentious and average-looking clothing.", [])
-# Academia = Results("Academia", "Academia fashion is influenced by learning, reading, and writing but with a gothic edge. Think cardigans, tweed pants, and trench coats.", [])
-# Soft = Results("Soft", "A style that includes many pastel colors, maximalist accessories, and an overall 'cutesy' look.", [])
-# Artsy = Results("Artsy", "A style that includes stripes, loose trousers, and oversized tees. Think graphic tees and corduroy.", [])
