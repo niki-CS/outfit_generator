@@ -5,15 +5,6 @@ from PIL import Image
 import random
 active = True
 
-#img= cv2.imread("./outfits/skirt.png")
-#img=img.convert('RGB')
-#img = Image.fromarray(img, 'RGB')
-#img.show()
-
-# import urllib.request
-# u = urllib.request.urlopen("https://us.shein.com/ROMWE-Goth-Solid-Lace-Up-Shirred-Cami-Dress-p-9765265-cat-1727.html?src_identifier=st%3D2%60sc%3Dgoth%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_goods_detail1659469818111&mallCode=1&scici=Search~~EditSearch~~1~~goth~~~~0
-# ")
-
 class Outfit:
     def __init__(self, name, description, link, photo, photo2):
         self.name = name
