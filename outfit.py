@@ -1,11 +1,26 @@
+import cv2
+from PIL import Image
+
+
 import random
 active = True
 
+#img= cv2.imread("./outfits/skirt.png")
+#img=img.convert('RGB')
+#img = Image.fromarray(img, 'RGB')
+#img.show()
+
+# import urllib.request
+# u = urllib.request.urlopen("https://us.shein.com/ROMWE-Goth-Solid-Lace-Up-Shirred-Cami-Dress-p-9765265-cat-1727.html?src_identifier=st%3D2%60sc%3Dgoth%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_goods_detail1659469818111&mallCode=1&scici=Search~~EditSearch~~1~~goth~~~~0
+# ")
+
 class Outfit:
-    def __init__(self, name, description, link):
+    def __init__(self, name, description, link, photo, photo2):
         self.name = name
         self.description = description
         self.link = link
+        self.photo = photo
+        self.photo2 = photo2
         self.option = []
         self.score = 0
     
@@ -38,13 +53,13 @@ class Outfit:
 
 
 
-outfit_1 = Outfit("Casual Outfit + 'Normal' Aesthetic", " Normal fashion is described as unpretentious and average-looking clothing.\n I think this graphic tee with these jeans would be a great fit for you and your style!\n If the tee selected is not your style, there are other options for the graphic listed on the site.", "https://www2.hm.com/en_us/productpage.1002471021.html AND https://www.forever21.com/us/2000456655.html?dwvar_2000456655_color=01&dwvar_2000456655_size=2&quantity=1")
+outfit_1 = Outfit("Casual Outfit + 'Normal' Aesthetic", " Normal fashion is described as unpretentious and average-looking clothing.\n I think this graphic tee with these jeans would be a great fit for you and your style!\n If the tee selected is not your style, there are other options for the graphic listed on the site.", "https://www2.hm.com/en_us/productpage.1002471021.html AND https://www.forever21.com/us/2000456655.html?dwvar_2000456655_color=01&dwvar_2000456655_size=2&quantity=1", "./outfits/jeans.png", "./outfits/shortshirt.png")
 outfit_1.option = ["peaceful", "pop", "stay inside", "neutral", "blend in", "forever 21", "3", "1", "3", "1"]
 
-outfit_2 = Outfit("Black Dress + 'Goth' Aesthetic", "Goth fashion is a style that is marked by dark, mysterious, and homogenous features.\n I think this black dress would look amazing on you!", "https://us.shein.com/ROMWE-Goth-Solid-Lace-Up-Shirred-Cami-Dress-p-9765265-cat-1727.html?src_identifier=st%3D2%60sc%3Dgoth%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_goods_detail1659469818111&mallCode=1&scici=Search~~EditSearch~~1~~goth~~~~0")
+outfit_2 = Outfit("Black Dress + 'Goth' Aesthetic", "Goth fashion is a style that is marked by dark, mysterious, and homogenous features.\n I think this black dress would look amazing on you!", "https://us.shein.com/ROMWE-Goth-Solid-Lace-Up-Shirred-Cami-Dress-p-9765265-cat-1727.html?src_identifier=st%3D2%60sc%3Dgoth%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_goods_detail1659469818111&mallCode=1&scici=Search~~EditSearch~~1~~goth~~~~0", "./outfits/dress2.png", "")
 outfit_2.option= ["expressive", "rock", "go out", "neutral", "stand out", "hot topic", "1", "3", "2", "3"]
 
-outfit_3 = Outfit("Argyle Set + 'Soft' Aesthetic", "A style that includes many pastel colors, maximalist accessories, and an overall 'cutesy' look.\n This tennis skirt and argyle vest with a button up to go below it would look great on you!", "https://us.shein.com/SHEIN-Teen-Girls-Argyle-Print-Tank-Top-And-Pleated-Skirt-Set-p-9708356-cat-2016.html?src_identifier=st%3D2%60sc%3Dsoft%20girl%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_search1659635902333&mallCode=1&scici=Search~~EditSearch~~1~~soft_20girl~~~~0 AND https://www.forever21.com/us/2000454077.html?dwvar_2000454077_color=01&quantity=1")
+outfit_3 = Outfit("Argyle Set + 'Soft' Aesthetic", "A style that includes many pastel colors, maximalist accessories, and an overall 'cutesy' look.\n This tennis skirt and argyle vest with a button up to go below it would look great on you!", "https://us.shein.com/SHEIN-Teen-Girls-Argyle-Print-Tank-Top-And-Pleated-Skirt-Set-p-9708356-cat-2016.html?src_identifier=st%3D2%60sc%3Dsoft%20girl%60sr%3D0%60ps%3D1&src_module=search&src_tab_page_id=page_search1659635902333&mallCode=1&scici=Search~~EditSearch~~1~~soft_20girl~~~~0 AND https://www.forever21.com/us/2000454077.html?dwvar_2000454077_color=01&quantity=1", "./outfits/skirt.png", "./outfits/shirt.png")
 outfit_3.option = ["vibrant", "lofi", "neutral", "cool", "neutral", "forever 21", "3", "3", "1", "2"]
 
 
@@ -80,13 +95,31 @@ score_list = [outfit_1.score, outfit_2.score, outfit_3.score]
 
 score_list.sort()
 if score_list[0] == outfit_1.score:
-    print(f"The FASHION BOT suggests this outfit:\n {outfit_1.name}. {outfit_1.description}. Here is the link(s):{outfit_1.link}.")
+    print(f"The FASHION BOT suggests this outfit:\n{outfit_1.name}.\n.{outfit_1.description}.\nHere is the link(s):\n{outfit_1.link}.")
+    img= cv2.imread(outfit_1.photo)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
+    img= cv2.imread(outfit_1.photo2)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
 
 elif score_list[0] == outfit_2.score:
-    print(f"The FASHION BOT suggests this outfit:\n {outfit_2.name}. {outfit_2.description}. Here is the link(s):{outfit_2.link}.")
+    print(f"The FASHION BOT suggests this outfit:\{outfit_2.name}.\n {outfit_2.description}.\nHere is the link(s):\n{outfit_2.link}.")
+    img= cv2.imread(outfit_2.photo)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
+    img= cv2.imread(outfit_2.photo2)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
 
 elif score_list[0] == outfit_3.score:
     print(f"The FASHION BOT suggests this outfit:\n {outfit_3.name}. {outfit_3.description}. Here is the link(s){outfit_3.link}.")
+    img= cv2.imread(outfit_3.photo)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
+    img= cv2.imread(outfit_3.photo2)
+    img = Image.fromarray(img, 'RGB')
+    print(img.show())
 
 elif score_list[0] == score_list[1]:
     random_choice = random.choice(outfit_1, outfit_2, outfit_3)
