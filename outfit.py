@@ -1,5 +1,12 @@
+# import cv2
+# from PIL import Image
+
 import random
 active = True
+
+# img= cv2.imread("shortshirt.jpeg")
+# img = Image.fromarray(img, "RGB")
+# img.show
 
 print("                             WELCOME!\n I am the Fashion Bot and I will help you make an outfit your choices to this quiz. Answer the following 10 questions honestly and I will generate an outfit I think you will look great in + let you know which style would suit you most!\n")
 
@@ -81,8 +88,6 @@ outfit_3.option = ["vibrant", "lofi", "neutral", "cool", "neutral", "forever 21"
 
 while active: 
         
-
-
 
 
 
